@@ -3,12 +3,14 @@ using System;
 
 public partial class Player : CharacterBody3D
 {
-    [Export]private AnimationPlayer animationPlayer;
-    [Export] private Sprite3D sprite3D;
+    [ExportGroup("Required Nodes")]
+    [Export]private AnimationPlayer animPlayerNode;
+    [Export] private Sprite3D spriteNode;
     private Vector2 direction = new();
     public override void _Ready()
     {
-
+            GD.Print(animPlayerNode.Name);
+            GD.Print(spriteNode.Name);
     }
     public override void _PhysicsProcess(double delta)
     {
@@ -19,11 +21,7 @@ public partial class Player : CharacterBody3D
     }
     public override void _Input(InputEvent @event)
     {
-        GD.Print(Input.GetVector("MoveLeft", "MoveRight", "MoveForward", "MoveBackeard"));
+        //GD.Print(Input.GetVector("MoveLeft", "MoveRight", "MoveForward", "MoveBackeard"));
         //direction = Input.GetVector("MoveLeft", "MoveRight", "MoveForward", "MoveBackeard");
-        //if (direction == Vector2.Zero)
-        //{
-            
-        //}
     }
 }

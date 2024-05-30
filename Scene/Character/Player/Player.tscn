@@ -76,7 +76,7 @@ _data = {
 script = ExtResource("1_cgk8r")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-texture = ExtResource("24_mjutm")
+texture = ExtResource("2_4cniw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
